@@ -12,10 +12,12 @@ namespace snakeCsharp
         static void Main(string[] args)
         {
             Point p1 = new Point();
-            p1.Draw(8,8,"#");
+            p1.x = 1;
+            p1.y = 3;
+            p1.simb = "*";
+            p1.Draw();
 
-            Point p2 = new Point();
-            p2.Draw(4, 4, "*");
+
 
             Console.ReadLine();
         }

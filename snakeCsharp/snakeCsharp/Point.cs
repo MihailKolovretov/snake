@@ -12,7 +12,7 @@ namespace snakeCsharp
         public int y;
         public string simb;
 
-        public void Draw(int x, int y, string simb)
+        public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(simb);
