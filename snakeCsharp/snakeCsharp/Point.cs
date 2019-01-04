@@ -12,6 +12,14 @@ namespace snakeCsharp
         public int y;
         public string simb;
 
+        public Point(int _x, int _y, string _simb) {
+            x = _x;
+            y = _y;
+            simb = _simb;
+        }
+
+
+
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
