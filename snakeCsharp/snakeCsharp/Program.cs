@@ -41,11 +41,7 @@ namespace snakeCsharp
             pList.Add(p4);
 
 
-            foreach (Point i in pList)
-            {
-                Console.WriteLine(i);
-            }
-
+          
             Console.ReadLine();
         }
     }
