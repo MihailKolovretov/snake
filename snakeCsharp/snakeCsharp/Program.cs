@@ -8,26 +8,14 @@ namespace snakeCsharp
 {
     class Program
     {
-        static void Draw(int x, int y, string simb)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(simb);
-        }
+        
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 4;
-            string simb1 = "*";
+            Point p1 = new Point();
+            p1.Draw(8,8,"#");
 
-            Draw(x1,y1,simb1);
-
-
-            int x2 = 2;
-            int y2 = 6;
-            string simb2 = "#";
-            Draw(x2, y2, simb2);
-
-
+            Point p2 = new Point();
+            p2.Draw(4, 4, "*");
 
             Console.ReadLine();
         }
