@@ -17,12 +17,14 @@ namespace snakeCsharp
            Point p2 = new Point(1, 5, "*");
            p2.Draw();
 
-            HorisontalLines line = new HorisontalLines(5, 15, 8, "+");
-            line.Drow();
-
-            VerticalLines Vline = new VerticalLines(4, 15, 5, "#");
-            Vline.Draw();
-
+            HorisontalLines Upline = new HorisontalLines(0, 79, 0, "+");
+            Upline.Draw();
+            HorisontalLines Downline = new HorisontalLines(0, 79, 24, "+");
+            Downline.Draw();
+            VerticalLines Leftline = new VerticalLines(0, 24, 0, "#");
+            Leftline.Draw();
+            VerticalLines Rightline = new VerticalLines(0, 24, 79, "#");
+            Rightline.Draw();
             Console.ReadLine();
         }
     }
