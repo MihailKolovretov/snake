@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace snakeCsharp
 {
-    class HorisontalLines : Figura
+    class HorisontalLines : Figura// наследует от родительского класса фигура
     {
         
 

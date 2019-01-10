@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace snakeCsharp
 {
-    class VerticalLines : Figura
+    class VerticalLines : Figura// наследует от родительского класса фигура
     {
        
         public VerticalLines(int yTop, int yDown, int x, string simb)

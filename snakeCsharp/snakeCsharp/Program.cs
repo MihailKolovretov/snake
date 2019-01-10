@@ -11,20 +11,21 @@ namespace snakeCsharp
 
         static void Main(string[] args)
         {
-           Point p1 = new Point(1, 3, "#");
-           p1.Draw();
+            Console.SetBufferSize(80, 25);
 
-           Point p2 = new Point(1, 5, "*");
-           p2.Draw();
-
-            HorisontalLines Upline = new HorisontalLines(0, 79, 0, "+");
+            HorisontalLines Upline = new HorisontalLines(0, 79, 0, "-");//верхняя горизонтальная линия
             Upline.Draw();
-            HorisontalLines Downline = new HorisontalLines(0, 79, 24, "+");
+            HorisontalLines Downline = new HorisontalLines(0, 79, 24, "_");//нижняя горизонтальная линия
             Downline.Draw();
-            VerticalLines Leftline = new VerticalLines(0, 24, 0, "#");
+            VerticalLines Leftline = new VerticalLines(0, 24, 0, "|");//левая вертикальная линия
             Leftline.Draw();
-            VerticalLines Rightline = new VerticalLines(0, 24, 79, "#");
+            VerticalLines Rightline = new VerticalLines(0, 24, 79, "|");// правая горизонтальная линия
             Rightline.Draw();
+           
+            
+            Point p = new Point(4, 5, "*");
+            Snake snake = new Snake(p, 4, Derection.RIGHT);
+            snake.Draw();
             Console.ReadLine();
         }
     }

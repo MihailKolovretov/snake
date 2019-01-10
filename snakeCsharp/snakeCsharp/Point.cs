@@ -19,11 +19,42 @@ namespace snakeCsharp
         }
 
 
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            simb = p.simb;
+        }
+
+        public void Move(int offset, Derection derection)
+        {
+            if (derection == Derection.RIGHT)
+            {
+                x = x + offset;
+            }
+            else if (derection == Derection.LEFT)
+            {
+                x = x - offset;
+            }
+            else if (derection == Derection.DOWN)
+            {
+                y = y - offset;
+            }
+            else if (derection == Derection.UP)
+            {
+                y = y + offset;
+            }
+        }
 
         public void Draw()
         {
             Console.SetCursorPosition(x, y);
             Console.Write(simb);
+        }
+
+        public override string ToString()
+        {
+            return x + ", " + ", " + simb;
         }
     }
 }
