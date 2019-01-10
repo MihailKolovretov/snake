@@ -19,14 +19,14 @@ namespace snakeCsharp
         }
 
 
-        public Point(Point p)
+        public Point(Point p) // создаем новыю точку точкой
         {
             x = p.x;
             y = p.y;
             simb = p.simb;
         }
 
-        public void Move(int offset, Derection derection)
+        public void Move(int offset, Derection derection) // метод смещения точки в зависимости от направления
         {
             if (derection == Derection.RIGHT)
             {
@@ -46,13 +46,21 @@ namespace snakeCsharp
             }
         }
 
-        public void Draw()
+        public void Draw() // вывод точки
         {
             Console.SetCursorPosition(x, y);
             Console.Write(simb);
         }
 
-        public override string ToString()
+        public void Clear()
+        {
+            simb = " ";
+            Draw();
+        }
+
+
+
+        public override string ToString()// магия
         {
             return x + ", " + ", " + simb;
         }

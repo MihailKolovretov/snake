@@ -8,8 +8,11 @@ namespace snakeCsharp
 {
     class Snake : Figura
     {
-        public Snake(Point tail, int length, Derection derection)
+        Derection derection;
+
+        public Snake(Point tail, int length, Derection _derection)
         {
+            derection = _derection;
             pList = new List<Point>();
             for (int i = 0; i < length; i++)
             {
@@ -17,6 +20,25 @@ namespace snakeCsharp
                 p.Move(i, derection);
                 pList.Add(p);
             }
+        }
+
+        internal void Move()
+        {
+            Point tail = pList.First();
+            pList.Remove(tail);
+            Point head = GetNextPoint();
+            pList.Add(head);
+
+            tail.Clear();
+            head.Draw();
+        }
+
+        public Point GetNextPoint()
+        {
+            Point head = pList.Last();
+            Point nextPoint = new Point(head);
+            nextPoint.Move(1, derection);
+            return nextPoint;
         }
     }
 }

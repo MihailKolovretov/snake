@@ -26,6 +26,8 @@ namespace snakeCsharp
             Point p = new Point(4, 5, "*");// задаем начальную точку змейки
             Snake snake = new Snake(p, 4, Derection.RIGHT);// начальная точка змейки, длинна хвоста змейки и направление движения.
             snake.Draw();// вывод змейки
+            snake.Move();
+
             Console.ReadLine();
         }
     }
