@@ -11,7 +11,7 @@ namespace snakeCsharp
 
         static void Main(string[] args)
         {
-            Console.SetBufferSize(80, 25);
+            Console.SetBufferSize(80, 25);// вывод окна размером 80*25.
 
             HorisontalLines Upline = new HorisontalLines(0, 79, 0, "-");//верхняя горизонтальная линия
             Upline.Draw();
@@ -23,9 +23,9 @@ namespace snakeCsharp
             Rightline.Draw();
            
             
-            Point p = new Point(4, 5, "*");
-            Snake snake = new Snake(p, 4, Derection.RIGHT);
-            snake.Draw();
+            Point p = new Point(4, 5, "*");// задаем начальную точку змейки
+            Snake snake = new Snake(p, 4, Derection.RIGHT);// начальная точка змейки, длинна хвоста змейки и направление движения.
+            snake.Draw();// вывод змейки
             Console.ReadLine();
         }
     }
