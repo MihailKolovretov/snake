@@ -22,18 +22,18 @@ namespace snakeCsharp
             }
         }
 
-        internal void Move()
+        internal void Move()// двигает змейку в сторону derection
         {
             Point tail = pList.First();
             pList.Remove(tail);
             Point head = GetNextPoint();
             pList.Add(head);
 
-            tail.Clear();
-            head.Draw();
+            tail.Clear();// удаление хвоста
+            head.Draw();// вывод символа головы
         }
 
-        public Point GetNextPoint()
+        public Point GetNextPoint()// получает следующую точку для головы змейки 
         {
             Point head = pList.Last();
             Point nextPoint = new Point(head);
