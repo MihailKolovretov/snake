@@ -38,11 +38,11 @@ namespace snakeCsharp
             }
             else if (derection == Derection.DOWN)
             {
-                y = y - offset;
+                y = y + offset;
             }
             else if (derection == Derection.UP)
             {
-                y = y + offset;
+                y = y - offset;
             }
         }
 

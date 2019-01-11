@@ -8,7 +8,7 @@ namespace snakeCsharp
 {
     class Snake : Figura
     {
-        Derection derection;
+       public Derection derection;
 
         public Snake(Point tail, int length, Derection _derection)
         {
@@ -32,6 +32,19 @@ namespace snakeCsharp
             tail.Clear();// удаление хвоста
             head.Draw();// вывод символа головы
         }
+
+        public void HandleKey (ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow)
+                derection = Derection.LEFT;
+            else if (key == ConsoleKey.RightArrow)
+                derection = Derection.RIGHT;
+            else if (key == ConsoleKey.UpArrow)
+                derection = Derection.UP;
+            else if (key == ConsoleKey.DownArrow)
+                derection = Derection.DOWN;
+        }
+
 
         public Point GetNextPoint()// получает следующую точку для головы змейки 
         {
